@@ -1,1 +1,1 @@
-# ZapWorkshop
+# Zed-Attack-Proxy - Workshop
