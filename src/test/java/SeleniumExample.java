@@ -23,7 +23,13 @@ public class SeleniumExample {
 		System.setProperty("webdriver.gecko.driver", "./geckodriver");
 
 		WebDriver driver;
-
+		FirefoxProfile profile=new FirefoxProfile();
+		profile.setPreference("network.proxy.type", 1);
+		profile.setPreference("network.proxy.http", "localhost");
+		profile.setPreference("network.proxy.http_port", "8080");
+		FirefoxOptions options= new FirefoxOptions();
+		options.setProfile(profile);
+		driver= new FirefoxDriver(options);
 		// Selenium running the script
 		driver.get("http://192.168.56.180/");
 		driver.get("http://192.168.56.180/mutillidae/index.php?page=add-to-your-blog.php");
